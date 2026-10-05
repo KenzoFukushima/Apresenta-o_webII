@@ -39,7 +39,7 @@ class UserController extends Controller
 );
 
         $foto = $request->file('foto');
-
+        
         $caminhoOriginal = $foto->storePublicly('avatars', 'public');
 
         $caminhoThumbnail = 'avatars/thumbs/' . pathinfo($caminhoOriginal, PATHINFO_FILENAME) . '.webp';

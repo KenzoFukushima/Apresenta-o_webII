@@ -53,20 +53,21 @@ URI	            Ação
 /users/{user}	perfil	Exibe o usuário cadastrado
 
 
-3. Armazenamento
+# 6. Armazenamento
 
-php
-$caminhoOriginal = $foto->storePublicly('avatars', 'public');
+    php
+    $caminhoOriginal = $foto->storePublicly('avatars', 'public');
 
 O arquivo vai para storage/app/public/avatars com nome aleatório. O caminho relativo é salvo na coluna foto.
 
 
 
-4. Thumbnail
+# 7. Thumbnail
+A thumbnail é gerada com o Intervention Image, biblioteca de manipulação de imagens instalada com "composer require intervention/image-laravel". No controller, a facade vem de use Intervention\Image\Laravel\Facades\Image;.
 
-php
-$imagem = Image::read($foto)->cover(150, 150)->toWebp();
-Storage::disk('public')->put($caminhoThumbnail, (string) $imagem);
+    php
+    $imagem = Image::read($foto)->cover(150, 150)->toWebp();
+    Storage::disk('public')->put($caminhoThumbnail, (string) $imagem);
 
 cover(150, 150) recorta e redimensiona sem distorcer. A miniatura é salva em storage/app/public/avatars/thumbs e o caminho vai para a coluna thumbnail.
 

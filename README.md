@@ -1,5 +1,5 @@
 # Upload e Manipulação de Arquivos e Imagens no Laravel
-Projeto do Seminário de Funcionalidades Laravel (Módulo 1, Web II) — Tema 01.
+Projeto do Seminário de Funcionalidades Laravel — Tema 01.
 Dupla: Thiago e Pedro
 
 Sobre:

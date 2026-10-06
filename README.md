@@ -86,18 +86,19 @@ Tabela users (database/migrations/..._create_users_table.php):
 A senha é gerada automaticamente (bcrypt('12345678')), pois o foco do projeto é o upload e não a autenticação.
 
 Estrutura principal
-app/
-  Http/Controllers/UserController.php
-  Models/User.php
-  
-database/migrations/..._create_users_table.php
 
-resources/views/
-  cadastro.blade.php
-  perfil.blade.php
-  layouts/
-  
-routes/web.php
-
-storage/app/public/avatars/        (foto original)
-storage/app/public/avatars/thumbs/ (thumbnails 150x150)
+    app/
+      Http/Controllers/UserController.php
+      Models/User.php
+      
+    database/migrations/..._create_users_table.php
+    
+    resources/views/
+      cadastro.blade.php
+      perfil.blade.php
+      layouts/
+      
+    routes/web.php
+    
+    storage/app/public/avatars/        (foto original)
+    storage/app/public/avatars/thumbs/ (thumbnails 150x150)
